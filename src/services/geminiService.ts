@@ -6,7 +6,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { OSSMeeting, GeneratedDocs, AIValidation } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const GEMINI_API_KEY = "AIzaSyA1yKH1RweT4T0lF4O_vacPF9zx0Girq5Q";
+
+const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 const SYSTEM_PROMPT = `Ты — высококвалифицированный юрист в сфере ЖКХ РФ и системный аналитик. Твоя задача — помогать в подготовке документов для Общего Собрания Собственников (ОСС).
 Все ответы должны быть строго на русском языке в формате JSON.
